@@ -36,12 +36,10 @@ const getInTouch = async (req, res) => {
 
       <p><b>Submitted At:</b> ${new Date().toLocaleString()}</p>
     `;
-
-    // ✅ Send Mail to Admin
     await resend.emails.send({
-      from: "Contact Form <admin@mybookhub.store>", // must be verified domain
+      from: "Contact Form <admin@mybookhub.store>", 
       to: "admin@saidrivingschoolandtravels.in",
-      subject: "New Contact Query - Driving School / PrintKart",
+      subject: "New Contact Query - Driving School",
       html: adminEmailHtml,
     });
 
